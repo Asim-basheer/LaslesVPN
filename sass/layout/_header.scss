@@ -33,7 +33,7 @@
       opacity: 0;
       visibility: hidden;
       position: fixed;
-      width: 100%;
+      width: 0;
       height: 100vh;
       flex-direction: column;
       justify-content: center;
@@ -48,9 +48,7 @@
       &.active {
         opacity: 1;
         visibility: visible;
-        animation-name: navAnimation;
-        animation-duration: 0.3s;
-        animation-timing-function: cubic-bezier(0.23, 0.41, 0.33, 1.12);
+        width: 100%;
       }
     }
   }
@@ -107,12 +105,15 @@
     align-items: center;
     display: none;
     z-index: 1500;
+    cursor: pointer;
     transition: all 0.3s 0.1s cubic-bezier(0.23, 0.41, 0.33, 1.12);
     @include respond(sm) {
       display: flex;
     }
 
     &.active {
+      position: fixed;
+      right: 7rem;
       span,
       &::before,
       &::after {
@@ -160,17 +161,5 @@
       height: 3px;
       transition: all 0.3s 0.1s cubic-bezier(0.23, 0.41, 0.33, 1.12);
     }
-  }
-}
-
-@keyframes navAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  80% {
-    transform: translateX(6rem);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
