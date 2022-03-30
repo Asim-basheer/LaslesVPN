@@ -68,7 +68,7 @@
 }
 
 .section-plan {
-  padding: 10rem 0;
+  padding: 2rem 0 10rem;
   &__container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -179,88 +179,4 @@
       cursor: pointer;
     }
   }
-}
-
-.footer {
-  padding: 25rem 0 10rem;
-  background-color: $color-grey-light;
-
-  @include respond(sm) {
-    padding: 27rem 0 5rem;
-  }
-  &__container {
-    display: flex;
-    justify-content: space-between;
-
-    @include respond(sm) {
-      flex-wrap: wrap;
-      gap: 8rem;
-      justify-content: center;
-    }
-  }
-
-  &__left {
-    @include respond(sm) {
-      text-align: center;
-    }
-  }
-
-  &__list {
-    list-style: none;
-    @include respond(sm) {
-      flex: 1;
-    }
-  }
-
-  &__item {
-    color: $color-grey;
-    &:not(:last-of-type) {
-      margin-bottom: 1rem;
-    }
-  }
-
-  &__heading {
-    margin-bottom: 2rem;
-    font-weight: 500;
-    font-size: 1.8rem;
-    color: $color-dark;
-  }
-
-  &__logo-box {
-    margin-bottom: 2rem;
-  }
-
-  &__icons {
-    display: flex;
-    gap: 2rem;
-    @include respond(sm) {
-      justify-content: center;
-    }
-  }
-  &__icon-box {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    background-color: $color-white;
-    box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-    &:hover {
-      background-color: $color-dark;
-      transform: translateY(-1px);
-      cursor: pointer;
-    }
-    img {
-      height: 2rem;
-    }
-  }
-
-  &__copyright {
-    color: $color-grey-dark;
-  }
-}
-
-.section-network {
 }

@@ -18,10 +18,7 @@
 // layout
 @import "./layout/container";
 @import "./layout/header";
+@import "./layout/footer";
 // pages
 
 @import "./pages/home";
-
-body {
-  height: 500rem;
-}

@@ -3,4 +3,5 @@ const list = document.querySelector(".header__list");
 
 toggle.addEventListener("click", () => {
   list.classList.toggle("active");
+  toggle.classList.toggle("active");
 });
