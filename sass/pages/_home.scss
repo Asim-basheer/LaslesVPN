@@ -1,0 +1,266 @@
+.section-hero {
+  display: flex;
+  align-items: center;
+  margin-top: 6rem;
+  gap: 4rem;
+
+  @include respond(sm) {
+    flex-direction: column;
+    gap: 8rem;
+    text-align: center;
+  }
+
+  &__content {
+    flex: 0 0 50%;
+  }
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.section-feature {
+  padding: 10rem 0;
+
+  @include respond(md) {
+    padding-top: 20rem;
+  }
+
+  @include respond(md) {
+    padding-top: 15rem;
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 6rem;
+
+    @include respond(sm) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__img-box {
+    flex: 1;
+    transform: translateY(-1rem);
+  }
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    &--pragraph {
+      transform: translateY(-1px);
+      font-size: 1.4rem;
+    }
+  }
+  //   &__icon {
+  //   }
+}
+
+.section-plan {
+  padding: 10rem 0;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 5rem;
+  }
+}
+
+.section-testimonials {
+  padding-top: 10rem;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 2rem;
+  }
+  &__card {
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border: 2px solid #dddd;
+    &.active {
+      border: 2px solid $color-red;
+    }
+  }
+  &__details-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    margin-right: 2rem;
+  }
+  &__heading-name {
+    line-height: 1.6;
+  }
+
+  &__heading-name--span {
+    display: block;
+    color: $color-grey;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  &__rate {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  &__pragraph {
+    color: $color-dark;
+    line-height: 1.8;
+  }
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 6rem;
+    margin-top: 5rem;
+
+    &__builts {
+      display: flex;
+      gap: 1rem;
+      span {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $color-grey-dark;
+        display: block;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &.active {
+          background-color: $color-red;
+          width: 5rem;
+          border-radius: 10rem;
+        }
+      }
+    }
+
+    &__arrow-box {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    &__arrow-left {
+      border: 2px solid $color-red;
+      background-color: transparent;
+      border-radius: 50%;
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &__arrow-right {
+      border: 2px solid $color-red;
+      background-color: $color-red;
+      border-radius: 50%;
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  padding: 25rem 0 10rem;
+  background-color: $color-grey-light;
+
+  @include respond(sm) {
+    padding: 27rem 0 5rem;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(sm) {
+      flex-wrap: wrap;
+      gap: 8rem;
+      justify-content: center;
+    }
+  }
+
+  &__left {
+    @include respond(sm) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    @include respond(sm) {
+      flex: 1;
+    }
+  }
+
+  &__item {
+    color: $color-grey;
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: $color-dark;
+  }
+
+  &__logo-box {
+    margin-bottom: 2rem;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 2rem;
+    @include respond(sm) {
+      justify-content: center;
+    }
+  }
+  &__icon-box {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: $color-white;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $color-dark;
+      transform: translateY(-1px);
+      cursor: pointer;
+    }
+    img {
+      height: 2rem;
+    }
+  }
+
+  &__copyright {
+    color: $color-grey-dark;
+  }
+}
+
+.section-network {
+}

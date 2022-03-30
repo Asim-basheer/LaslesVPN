@@ -1,0 +1,47 @@
+.card {
+  box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+  border-radius: 1rem;
+  padding: 5rem;
+
+  &--hot {
+    border: 2px solid $color-red;
+  }
+  &__icon {
+    display: block;
+    margin: 0 auto 3rem;
+  }
+  &__heading--primary {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+  &__list {
+    list-style: none;
+    height: 31rem;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__item--icon {
+  }
+  &__item--pragraph {
+    color: $color-grey;
+  }
+
+  &__heading--secondary {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.5rem;
+    &--span {
+      font-weight: 400;
+      color: $color-grey;
+    }
+  }
+}

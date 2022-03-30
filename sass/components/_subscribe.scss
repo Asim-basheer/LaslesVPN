@@ -1,0 +1,23 @@
+.subscribe {
+  transform: translateY(50%);
+  margin-top: -5rem;
+
+  @include respond(sm) {
+    margin-top: -15rem;
+  }
+  &__container {
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+    padding: 3.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: $color-white;
+    @include respond(sm) {
+      flex-direction: column;
+      gap: 4rem;
+      text-align: center;
+      padding: 5rem 3rem 7rem;
+    }
+  }
+}

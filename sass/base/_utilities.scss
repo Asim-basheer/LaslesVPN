@@ -1,0 +1,36 @@
+.u-mb-small {
+  margin-bottom: 3rem;
+}
+
+.u-mb-big {
+  margin-bottom: 5rem;
+  @include respond(md) {
+    margin-bottom: 3rem;
+  }
+}
+.u-mb-large {
+  margin-bottom: 6rem;
+}
+
+.u-mt-large {
+  margin-top: 6rem;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-cap-first-letter {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.u-center-block-ele {
+  margin: 0 auto;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
